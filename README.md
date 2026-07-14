@@ -551,8 +551,3 @@ please open an issue before submitting a large pull request.
 
 ---
 
-# 📄 License
-
-This project is intended for educational and research purposes.
-
-Choose an appropriate open-source license before public release (MIT, Apache 2.0, etc.).
