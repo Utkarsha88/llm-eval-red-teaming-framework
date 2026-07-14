@@ -2,7 +2,7 @@ import sys
 import logging
 from app.utils.config import settings
 
-def setup_logger(name: str = "sentinel") -> logging.Logger:
+def setup_logger(name: str = "llm-eval-RTF") -> logging.Logger:
     logger = logging.getLogger(name)
     
     # Prevent duplicate handlers if initialized multiple times
