@@ -44,7 +44,7 @@ with st.sidebar:
     selected_models = st.multiselect(
         "Select from Presets",
         options=standard_models,
-        default=["google/gemini-2.5-flash"]
+        default=["gemini-3.5-flash"]
     )
     
     # Allow the user to type in ANY OpenRouter model dynamically

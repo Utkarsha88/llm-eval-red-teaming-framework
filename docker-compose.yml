@@ -1,0 +1,32 @@
+
+
+services:
+  # --- BACKEND FASTAPI ENGINE ---
+  backend:
+    build:
+      context: .
+      dockerfile: backend.Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./outputs:/workspace/outputs  # Persistent volume mapping for JSON report tracking
+    networks:
+      - sentinel_network
+
+  # --- FRONTEND STREAMLIT UI ---
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend  # Wait for backend initialization before launching UI maps
+    networks:
+      - sentinel_network
+
+networks:
+  sentinel_network:
+    driver: bridge
