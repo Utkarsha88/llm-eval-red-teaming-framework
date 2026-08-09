@@ -393,7 +393,7 @@ Generated artifacts include
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/llm-evaluation-framework.git
+git clone https://github.com/Utkarsha88/llm-evaluation-framework.git
 
 cd llm-evaluation-framework
 ```
